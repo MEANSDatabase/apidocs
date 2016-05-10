@@ -36,3 +36,11 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
+
+# Deploying using middleman
+# run `middleman deploy` to send code live.
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch   = 'master' # default: gh-pages
+  deploy.build_before = true # default: false
+end
